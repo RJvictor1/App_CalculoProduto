@@ -1,0 +1,7 @@
+{
+  "name": "Calculo_Produto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,14 @@
+ion-card{
+    margin:0;
+}
+ion-card-subtitle{
+  --max-line:2;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:var(--max-line) ;
+}
+
+ion-card-header{
+    height:80px;
+}

@@ -8,12 +8,12 @@ ion-label{
 .block {
     width: 100%;
     height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color:#222428;
     color: #fff;
   }
 ion-modal {
     --height: auto;
+  }
+  .block ion-toolbar ion-button{
+    color: #fff;
   }

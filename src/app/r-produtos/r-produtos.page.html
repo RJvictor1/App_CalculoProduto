@@ -1,0 +1,173 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  color="dark">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/tabs/produtos']">
+        <ion-icon size="large"  name="arrow-undo-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>R-produtos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div class="flex">
+    <div class="ion-activatable flex rectangle">
+      <ion-item lines="full" id="bt-imagem">
+        <ion-icon name="add"></ion-icon>
+      </ion-item>
+      <span>IMAGEM</span>
+      <ion-ripple-effect></ion-ripple-effect>      
+    </div>
+    <span>Recomendado : 300x300</span>
+  </div>
+
+    <ion-item lines="full" class="item-has-focus margin">
+      <ion-input aria-label="Dark input" color="dark" placeholder="Nome Matérial"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+        <ion-label>Descrição / Marca</ion-label>
+    </ion-item>
+
+    <ion-item fill="outline" class="margin m2">
+      <ion-textarea placeholder="DESCRIÇÃO" [autoGrow]="true"></ion-textarea>
+    </ion-item>
+    
+
+    <ion-item color="dark">
+      <ion-select label="Medida" placeholder="KG">
+        <ion-select-option value="kg">Kg</ion-select-option>
+        <ion-select-option value="g">g</ion-select-option>
+        <ion-select-option value="L">L</ion-select-option>
+        <ion-select-option value="ml">ml</ion-select-option>
+        <ion-select-option value="un">unidade</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="full" class="item-has-focus margin ion-text-center">
+      <ion-input aria-label="Dark input" color="dark" type="number" placeholder="0"></ion-input>
+    </ion-item>
+
+    <ion-item class="ion-text-center" color="dark">
+        <ion-title>Composição</ion-title>
+    </ion-item>
+
+    <ion-segment class="m2" [(ngModel)]="segment" color="dark" scrollable>
+      <ion-segment-button value="materiais" checked>
+        <ion-label>Matériais</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="produtos">
+        <ion-label>Produtos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div class="ion-margin-bottom" [ngSwitch]="segment">
+      <ion-list *ngSwitchCase="'materiais'">
+
+        <ion-item-sliding>
+          <ion-item-options side="start">
+            <ion-item-option color="dark">
+              <ion-input placeholder="0"></ion-input>
+            </ion-item-option>
+          </ion-item-options>
+
+          <ion-item detail="true" detail-icon="swap-horizontal" >
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>H2 titulo do material</h2>
+              <p>1kg - Subtotal: R$:200,00 </p>
+            </ion-label>
+          </ion-item>
+
+            <ion-item-options side="end">
+              <ion-item-option color="dark">
+                <ion-select aria-label="unidade" placeholder="L/ml">
+                  <ion-select-option value="L">L</ion-select-option>
+                  <ion-select-option value="g">ml</ion-select-option>
+                </ion-select>
+              </ion-item-option>
+              <ion-item-option color="danger">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+
+        <ion-item-sliding>
+          <ion-item-options side="start">
+            <ion-item-option color="dark">
+              <ion-input placeholder="0"></ion-input>
+            </ion-item-option>
+          </ion-item-options>
+
+          <ion-item detail="true" detail-icon="swap-horizontal" >
+            <ion-thumbnail slot="start">
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>H2 titulo do material</h2>
+              <p>1kg - Subtotal: R$:200,00 </p>
+            </ion-label>
+          </ion-item>
+
+            <ion-item-options side="end">
+              <ion-item-option color="dark">
+                <ion-select aria-label="unidade" placeholder="L/ml">
+                  <ion-select-option value="L">L</ion-select-option>
+                  <ion-select-option value="g">ml</ion-select-option>
+                </ion-select>
+              </ion-item-option>
+              <ion-item-option color="danger">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'produtos'">
+
+        <ion-item-sliding>
+          <ion-item-options side="start">
+            <ion-item-option color="dark">
+              <ion-input placeholder="0"></ion-input>
+            </ion-item-option>
+        </ion-item-options>
+
+        <ion-item detail="true" detail-icon="swap-horizontal" >
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>H2 titulo do produto</h2>
+            <p>1kg - Subtotal: R$:200,00 </p>
+          </ion-label>
+        </ion-item>
+
+            <ion-item-options side="end">
+              <ion-item-option color="dark">
+                <ion-select aria-label="unidade" placeholder="kg/g">
+                  <ion-select-option value="kg">kg</ion-select-option>
+                  <ion-select-option value="g">g</ion-select-option>
+                </ion-select>
+              </ion-item-option>
+              <ion-item-option color="danger">
+                <ion-icon slot="icon-only" name="trash"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+        </ion-item-sliding>
+       
+      </ion-list>
+       
+        <div class="flex add">
+          <ion-button size="large" color="dark">
+            <ion-icon name="add" size="large"></ion-icon>
+          </ion-button>
+        </div>
+      
+    </div>
+    <ion-button href="/tabs/produtos" color="dark" size="large" expand="full">REGISTRAR</ion-button>
+
+ 
+</ion-content>

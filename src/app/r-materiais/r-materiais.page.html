@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar  color="dark">
+    <ion-buttons slot="start">
+      <ion-button href="/tabs/produtos">
+        <ion-icon size="large"  name="arrow-undo-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>R-materiais</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div class="flex">
+    <div class="ion-activatable flex rectangle">
+      <ion-item lines="full" id="bt-imagem">
+        <ion-icon name="add"></ion-icon>
+      </ion-item>
+      <span>IMAGEM</span>
+      <ion-ripple-effect></ion-ripple-effect>      
+    </div>
+    <span>Recomendado : 300x300</span>
+  </div>
+
+  <ion-list>
+    <ion-item lines="full" class="item-has-focus margin">
+      <ion-input aria-label="Dark input" color="dark" placeholder="Nome Matérial"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+        <ion-label>Descrição / Marca</ion-label>
+    </ion-item>
+
+    <ion-item fill="outline" class="margin m2">
+      <ion-textarea placeholder="DESCRIÇÃO" [autoGrow]="true"></ion-textarea>
+    </ion-item>
+    
+
+    <ion-item color="dark">
+      <ion-select label="Medida" placeholder="KG">
+        <ion-select-option value="kg">Kg</ion-select-option>
+        <ion-select-option value="g">g</ion-select-option>
+        <ion-select-option value="L">L</ion-select-option>
+        <ion-select-option value="ml">ml</ion-select-option>
+        <ion-select-option value="un">unidade</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="full" class="item-has-focus margin ion-text-center">
+      <ion-input aria-label="Dark input" color="dark" type="number" placeholder="0"></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+        <ion-label>Preço R$</ion-label>
+    </ion-item>
+
+    <ion-item lines="full" class="item-has-focus margin ion-text-center">
+      <ion-input  aria-label="Dark input" type="number" color="dark" placeholder="0,00"></ion-input>
+    </ion-item>
+
+    <ion-button color="dark" size="large" expand="full">REGISTRAR</ion-button>
+  </ion-list>
+
+  
+ 
+</ion-content>

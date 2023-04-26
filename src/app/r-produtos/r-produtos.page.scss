@@ -1,0 +1,40 @@
+.rectangle {
+    position: relative;
+    overflow: hidden;
+    width: 340px;
+    height: 200px;
+    //background-color: rgb(217, 217, 217);
+    background:url("https://docs-demo.ionic.io/assets/madison.jpg") no-repeat;
+    background-size:100%;
+    
+  }
+  .flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+#bt-imagem{
+  width:max-content;
+  height:max-content;
+}
+#bt-imagem::part(native) {
+ background-color: rgba(255, 255, 255, 0.324);
+ border-radius:10px;
+}
+span{
+  margin:5px;
+ color: rgb(165, 165, 165);
+}
+.margin{
+  margin-bottom:40px;
+}
+.m2{
+  margin-top:2px;
+}
+ion-textarea{
+  --placeholder-opacity: 0.5;
+}
+.add{
+  background-color: rgba(172, 172, 172, 0.368);
+}

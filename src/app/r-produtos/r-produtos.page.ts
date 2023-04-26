@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ModalController } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { RpCheckboxComponent } from '../rp-checkbox/rp-checkbox.component';
 
 @Component({
   selector: 'app-r-produtos',
@@ -13,7 +14,15 @@ import { RouterModule } from '@angular/router';
 })
 export class RProdutosPage implements OnInit {
   segment="materiais";
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
+
+  async openModal() {
+
+    const modal = await this.modalCtrl.create({
+      component: RpCheckboxComponent,
+    });
+    modal.present();
+  }
 
   ngOnInit() {
   }

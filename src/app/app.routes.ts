@@ -21,4 +21,12 @@ export const routes: Routes = [
     path: 'r-materiais',
     loadComponent: () => import('./r-materiais/r-materiais.page').then( m => m.RMateriaisPage)
   },
+  {
+    path: 'v-produto',
+    loadComponent: () => import('./v-produto/v-produto.page').then( m => m.VProdutoPage)
+  },
+  {
+    path: 'v-material',
+    loadComponent: () => import('./v-material/v-material.page').then( m => m.VMaterialPage)
+  },
 ];

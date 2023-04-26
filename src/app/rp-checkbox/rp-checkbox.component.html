@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons (click)="cancel()" slot="start">
+      <ion-button>
+        <ion-icon size="large"  name="arrow-undo-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-searchbar  placeholder="Pesquisa"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <ion-segment color="dark"  [(ngModel)]="segment" scrollable>
+    <ion-segment-button value="materiais" checked>
+      <ion-label>Matériais</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="produtos">
+      <ion-label>Produtos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segment">
+    <ion-list *ngSwitchCase="'materiais'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>H2 titulo do pmaterial</h2>
+            <p>descrição desse matérial</p>
+            <p>1kg - R$:20,00</p>
+          </ion-label>
+          <ion-checkbox color="dark"></ion-checkbox>
+      </ion-item>  
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'produtos'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>H2 titulo do pmaterial</h2>
+            <p>descrição desse matérial</p>
+            <p>1kg - R$:20,00</p>
+          </ion-label>
+          <ion-checkbox color="dark"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-label>
+            <h2>H2 titulo do pmaterial</h2>
+            <p>descrição desse matérial</p>
+            <p>1kg - R$:20,00</p>
+          </ion-label>
+          <ion-checkbox color="dark"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-button  color="dark" size="large" expand="full">Salvar</ion-button>
+  </ion-toolbar>
+</ion-footer>

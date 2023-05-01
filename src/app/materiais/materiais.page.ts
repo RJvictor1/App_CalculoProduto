@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import {ToolbarComponent} from '../toolbar/toolbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-materiais',
@@ -14,7 +15,10 @@ import { FooterComponent } from '../footer/footer.component';
 })
 export class MateriaisPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  view(){
+    this.router.navigate(['/v-material']);
+  }
 
   ngOnInit() {
   }

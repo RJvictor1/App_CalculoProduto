@@ -21,6 +21,6 @@ export class TabsPage {
   }
   registrar(r: any) {
     this.modal.dismiss(null, 'cancel');
-    this.router.navigate([r])
+    this.router.navigate([r]);
   }
 }

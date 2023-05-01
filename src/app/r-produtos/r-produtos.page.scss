@@ -41,6 +41,10 @@ ion-textarea{
 .total{
   margin-top:40px;
   margin-bottom:70px;
+  border: 2px;
+  border-top-style:double;
+  border-bottom-style:double;
+  border-color: rgb(0, 0, 0);
 }
 .composicao{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

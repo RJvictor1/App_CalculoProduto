@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import {ToolbarComponent} from '../toolbar/toolbar.component';
 import { FooterComponent } from '../footer/footer.component';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-produtos',
@@ -14,9 +14,11 @@ import { RouterModule } from '@angular/router';
   imports: [IonicModule, CommonModule, FormsModule, ToolbarComponent, FooterComponent, RouterModule]
 })
 export class ProdutosPage implements OnInit {
-
-  constructor() { }
-
+ 
+  constructor(private router: Router) { }
+  view(){
+    this.router.navigate(['/v-produto']);
+  }
   ngOnInit() {
   }
 

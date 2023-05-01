@@ -1,13 +1,125 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>V-produto</ion-title>
+  <ion-toolbar  color="dark">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/tabs/produtos']">
+        <ion-icon size="large"  name="arrow-undo-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>V-produtos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="popover-button">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
+
+<ion-popover trigger="popover-button" [dismissOnSelect]="true">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item [button]="true" [detail]="false">
+          <ion-icon slot="start" name="sync"></ion-icon>
+          <ion-label>Atualizar</ion-label>
+        </ion-item>
+        <ion-item [button]="true" [detail]="false">
+          <ion-icon slot="start" name="trash"></ion-icon>
+          <ion-label>Excluir</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">V-produto</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid  class="ion-no-padding">
+    <ion-row>
+      <ion-col>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      </ion-col>
+      <ion-col class="nome">
+        <h6>NOME DO PRODUTO</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-horizontal">
+        <p> descrição produto</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-text-center ion-padding-vertical QP">
+      <ion-col>
+        <span>Quantidade: 1 kg</span>
+      </ion-col>
+      <ion-col>
+        <span>R$: 100,00  </span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-margin-top ion-padding-top">
+    <ion-row>
+      <ion-col class="ion-align-self-center" size="5">
+        <div class="linha"></div>
+      </ion-col>
+      <ion-col class="ion-text-center">
+        <ion-icon aria-hidden="true" name="triangle"></ion-icon>
+      </ion-col>
+      <ion-col class="ion-align-self-center" size="5">
+        <div class="linha"></div>
+      </ion-col>
+    </ion-row>
+    <ion-row class="borda">
+      <ion-col  class="ion-text-center ion-padding-bottom">
+        <span>MATÉRIAIS</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-padding-end">
+        <ul>
+          <li class="ion-margin-bottom borda">
+            <div>
+              <p>Material Material Material Material Material</p>
+              <span>1 kg</span>
+              <span> R$: 0,00</span>
+            </div>
+          </li>
+
+          <li class="ion-margin-bottom borda">
+            <div>
+              <p>Produto Material Material Material</p>
+              <span>1 kg</span>
+              <span> R$: 0,00</span>
+            </div> 
+            <ul>
+              <li>
+                <div>
+                  <p>Material</p>
+                  <span>1 kg</span>
+                  <span> R$: 0,00</span>
+                 </div>
+              </li>
+              <li>
+                <div>
+                  <p>Material Material Material Material Material</p>
+                  <span>1 kg</span>
+                  <span> R$: 0,00</span>
+                </div>  
+              </li>
+            </ul>
+          </li>
+
+          <li class="ion-margin-bottom borda">
+            <div>
+              <p>Material</p>
+              <span>1 kg</span>
+              <span> R$: 0,00</span>
+            </div>
+          </li>
+          
+        </ul>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>
